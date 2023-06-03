@@ -12,6 +12,7 @@ openpyxl = "*"
 matplotlib = "*"
 seaborn = "*"
 xgboost = "*"
+optuna = "*"
 
 [dev-packages]
 
