@@ -2,7 +2,7 @@ from utils.model_io import load_pickle
 
 json = {'type_independent_activity_id': '2',
  'is_tax_return': 1,
- 'region_id': '0.0',
+ 'region_id': '0',
  'activity': 'others',
  'job_role': 'independent',
  'year_exp_token': '2023',
@@ -15,8 +15,7 @@ json = {'type_independent_activity_id': '2',
  'has_date_exp_token': False,
  'incomes': 15.285262405144474,
  'extra_incomes': 0.0,
- 'familiar_debts': 13.122365377402328
- }
+ 'familiar_debts': 13.122365377402328}
 
 
 
