@@ -13,9 +13,9 @@ json = {'type_independent_activity_id': '2',
  'has_familiar_debts': 0,
  'has_region_id': False,
  'has_date_exp_token': False,
- 'incomes': 15.285262405144474,
+ 'incomes': 4_325_333,
  'extra_incomes': 0.0,
- 'familiar_debts': 13.122365377402328}
+ 'familiar_debts': 500_000}
 
 
 
