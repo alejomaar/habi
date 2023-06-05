@@ -4,21 +4,23 @@ from pydantic import BaseModel
 
 
 # Shared properties
-class UserBase(BaseModel):
-    type_independent_activity_id: str
-    is_tax_return: bool
-    region_id :str
-    name:str
-    'name.1':str
-    year_exp_token:str
-    age_section:str
-    month_exp_token: int
-    terms_conditions: bool
-    is_selected: bool
-    has_extra_incomes: bool
-    has_familiar_debts: bool
-    has_region_id: bool
-    has_date_exp_token:bool
-    incomes:float
-    extra_incomes:float
-    familiar_debts:float
+class User(BaseModel):
+    type_independent_activity_id: str ='11'
+    is_tax_return: bool =1 
+    region_id :str = '1.0'
+    name:str='manufacture'
+    name_1:str='independent'
+    year_exp_token:str='2023'
+    age_section:str='more 40'
+    month_exp_token: int =4
+    terms_conditions: bool=1
+    is_selected: bool= 0
+    has_extra_incomes: bool =1
+    has_familiar_debts: bool =1
+    has_region_id: bool = True
+    has_date_exp_token:bool= True
+    incomes:float = 16.3
+    extra_incomes:float = 0.0
+    familiar_debts:float = 0.0
+    class Config:
+        orm_mode = True

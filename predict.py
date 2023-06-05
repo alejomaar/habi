@@ -16,7 +16,9 @@ json = {'type_independent_activity_id': '11',
  'has_date_exp_token': True,
  'incomes': 16.300417291085605,
  'extra_incomes': 0.0,
- 'familiar_debts': 0.0}
+ 'familiar_debts': 0.0
+ }
+
 
 
 

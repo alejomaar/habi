@@ -1,7 +1,7 @@
 from typing import Any, List
 from utils.model_io import load_pickle
 from fastapi import APIRouter
-
+from  schemas.user import User
 
 model = load_pickle('./models/XGBClassifier.pkl')
 dv = load_pickle('./models/dict_vectorizer.pkl')
@@ -32,6 +32,15 @@ def read_users() -> Any:
     prob = model.predict_proba(output)[0][0]
     print(prob)
     return dict(pred =float(prob) )
+
+@router.post("/predict")
+def read_users(user:User) -> Any:
+    user = dict(user)
+    user['name.1'] = user['name_1']
+    del user['name_1']
+    output = dv.transform([user])    
+    prob = model.predict_proba(output)[0][0]
+    return dict(pred = float(prob) )
 
 
 
