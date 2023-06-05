@@ -13,6 +13,8 @@ matplotlib = "*"
 seaborn = "*"
 xgboost = "*"
 optuna = "*"
+fastapi = "*"
+uvicorn = {extras = ["standard"], version = "*"}
 
 [dev-packages]
 

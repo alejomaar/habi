@@ -1,4 +1,10 @@
+from typing import Any, List
 from utils.model_io import load_pickle
+from fastapi import APIRouter
+
+
+model = load_pickle('./models/XGBClassifier.pkl')
+dv = load_pickle('./models/dict_vectorizer.pkl')
 
 json = {'type_independent_activity_id': '11',
  'is_tax_return': 1,
@@ -18,11 +24,16 @@ json = {'type_independent_activity_id': '11',
  'extra_incomes': 0.0,
  'familiar_debts': 0.0}
 
+router = APIRouter()
+
+@router.get("/test")
+def read_users() -> Any:
+    output = dv.transform([json])
+    prob = model.predict_proba(output)[0][0]
+    print(prob)
+    return dict(pred =float(prob) )
 
 
-model = load_pickle('./models/XGBClassifier.pkl')
-dv = load_pickle('./artifacts/dict_vectorizer.pkl')
-output = dv.transform([json])
-prob = model.predict_proba(output)
 
-print(prob[0])
+
+
