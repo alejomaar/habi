@@ -15,6 +15,7 @@ xgboost = "*"
 optuna = "*"
 fastapi = "*"
 uvicorn = {extras = ["standard"], version = "*"}
+pyarrow = "*"
 
 [dev-packages]
 
